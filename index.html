@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="main-header">
@@ -33,7 +34,7 @@
         </ul>
         <ul class="navigation-list navigation-catalog">
           <li class="navigation-item">
-           <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+           <a class="link navigation-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation-item">
             <button class="navigation-catalog-button" type="button"></button>
@@ -61,13 +62,13 @@
         </ul>
         <ul class="navigation-list">
           <li class="navigation-item">
-           <a class="navigation-link" href="#">Доставка</a>
+           <a class="link navigation-link" href="#">Доставка</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="link navigation-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="link navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -75,24 +76,54 @@
     <main class="main-index">
       <h1 class="visually-hidden">Интернет-магазин «Девайс».</h1>
       <section class="main-slider">
-        <h2 class="main-slider-title">Порхает как бабочка,
-жалит как пчела!</h2>
+        <h2 class="visually-hidden">Фотогалерея лучших товаров.</h2>
         <button class="slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущий товар.</span>
         </button>
-        <img class="slider-image quadrocopter-top" src="images/slider-1.png" alt="Квадрокоптер." width="560" height="560">
         <button class="slider-button slider-next" type="button">
           <span class="visually-hidden">Следующий товар.</span>
         </button>
-        <p class="main-slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-</p>
-        <a class="button main-slider-link" href="#">Подробнее</a>
-        <dl class="main-slider-characteristics">
-          <dt class="main-slider-characteristic">Дальность полета</dt>
-          <dd class="main-slider-meaning">800 м</dd>
-          <dt class="main-slider-characteristic">Радиус поражения</dt>
-          <dd class="main-slider-meaning">50 м</dd>
-        </dl>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <h3 class="slider-title">Порхает как бабочка,
+жалит как пчела!</h3>
+            <p class="main-slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер." width="560" height="560">
+            <a class="button link main-slider-link" href="#">Подробнее</a>
+            <dl class="main-slider-characteristics">
+              <dt class="main-slider-characteristic">Дальность полета</dt>
+              <dd class="main-slider-meaning">800 м</dd>
+              <dt class="main-slider-characteristic">Радиус поражения</dt>
+              <dd class="main-slider-meaning">50 м</dd>
+            </dl>
+          </li>
+          <li class="slider-item">
+            <h3 class="slider-title">Худеем
+правильно!</h3>
+            <p class="main-slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет." width="560" height="560">
+            <a class="button link main-slider-link" href="#">Подробнее</a>
+            <dl class="main-slider-characteristics">
+              <dt class="main-slider-characteristic">Без подзарядки</dt>
+              <dd class="main-slider-meaning">48 часов</dd>
+            </dl>
+          </li>
+          <li class="slider-item">
+            <h3 class="slider-title">Делай селфи,
+как Бен Стиллер!</h3>
+            <p class="main-slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <img class="slider-image" src="images/slider-3.png" alt="Селфи-палка." width="560" height="560">
+            <a class="button link main-slider-link" href="#">Подробнее</a>
+            <dl class="main-slider-characteristics">
+              <dt class="main-slider-characteristic">Длина палки</dt>
+              <dd class="main-slider-meaning">8,5 м</dd>
+              <dt class="main-slider-characteristic">Вес палки</dt>
+              <dd class="main-slider-meaning">5 кг</dd>
+              <dt class="main-slider-characteristic">Материал</dt>
+              <dd class="main-slider-meaning">Карбон</dd>
+            </dl>
+          </li>
+        </ul>
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current" type="button">
@@ -150,14 +181,31 @@
           </li>
         </ul>
       </section>
-      <section class="delivery-slider">
-        <a class="button delivery-slider-link delivery-link-activ" href="#">Доставка</a>
-        <a class="button delivery-slider-link" href="#">Гарантия</a>
-        <a class="button delivery-slider-link" href="#">Кредит</a>
-        <h2 class="delivery-slider-title">Доставка</h2>
-        <p class="delivery-slider-description">Мы с удовольствием доставим ваш товар прямо
+      <section class="tabs">
+        <h2 class="visually-hidden">Переключение между секциями доставка, гарантия, кредит.</h2>
+        <ul class="tabs-content-list">
+          <li class="tab-item">
+            <h3 class="tab-title">Доставка</h3>
+            <p class="tab-description">Мы с удовольствием доставим ваш товар прямо
 к вашему подъезду совершенно бесплатно! Ведь
 мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="tab-item">
+            <h3 class="tab-title">Гарантия</h3>
+            <p class="tab-description">Если из-за возгорания купленного у нас товара у вас
+сгорит дом — не переживайте, мы выдадим вам новый.
+Товар, не дом, конечно же.</p>
+          </li>
+          <li class="tab-item">
+            <h3 class="tab-title">Кредит</h3>
+            <p class="tab-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+          </li>
+        </ul>
+        <div class="tab-links">
+        <a class="button link tab-link tab-link-activ" href="#">Доставка</a>
+        <a class="button link tab-link" href="#">Гарантия</a>
+        <a class="button link tab-link" href="#">Кредит</a>
+        </div>
       </section>
       <section class="on-order">
         <h2 class="on-order-title">Доставим редкий товар под заказ</h2>
@@ -174,7 +222,7 @@
           <li class="delivery-item">СДИК</li>
           <li class="delivery-item">ТоксБерри</li>
         </ul>
-        <a class="button about-link" href="#">Подробнее о нас</a>
+        <a class="button link about-link" href="#">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
@@ -190,7 +238,7 @@
           <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
-        <a class="button contacts-button" href="#">Напишите нам</a>
+        <a class="button link contacts-button" href="#">Напишите нам</a>
       </section>
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь
@@ -200,7 +248,7 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe-email visually-hidden" for="subscribe">Подписаться.</label>
           <input class="subscribe-input" type="email" name="subscribe-email" placeholder="Ваш e-mail" id="subscribe">
-          <button class="subscribe-button" type="button">Подписаться</button>
+          <button class="subscribe-button link" type="button">Подписаться</button>
         </form>
         <p class="subscribe-discription">Это бесплатно</p>
       </section>
@@ -218,13 +266,13 @@
         <h2 class="visually-hidden">Навигация.</h2>
         <ul class="footer-navigation-list navigation-list">
           <li class="footer-navigation-item navigation-item">
-           <a class="footer-navigation-link navigation-link" href="#">Доставка</a>
+           <a class="link footer-navigation-link navigation-link" href="#">Доставка</a>
           </li>
           <li class="footer-navigation-item navigation-item">
-            <a class="footer-navigation-link navigation-link" href="#">Гарантия</a>
+            <a class="link footer-navigation-link navigation-link" href="#">Гарантия</a>
           </li>
           <li class="footer-navigation-item navigation-item">
-            <a class="footer-navigation-link navigation-link" href="#">Контакты</a>
+            <a class="link footer-navigation-link navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </section>
