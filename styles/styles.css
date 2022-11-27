@@ -22,6 +22,16 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,6 +45,10 @@
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -83,14 +97,16 @@ body {
 
 .main-slider {
   background: linear-gradient(#ffe17f 150px, #ffffff 150px);
+  position: relative;
 }
 
-.navigation-list {
-  margin: 0;
+.navigation-user-list {
+  display: flex;
+  width: 100%;
 }
 
 .tabs {
-  background: linear-gradient(to top, #f0f0f0 289px, #ffffff 289px);
+  background: linear-gradient(#ffffff 102px, #f0f0f0 102px);
 }
 
 .on-order {
@@ -117,25 +133,15 @@ body {
   text-decoration: none;
 }
 
-.subscribe-discription {
-  margin: 0;
-}
-
-.catalog-wrapper {
+.catalog-container {
   background: #f0f0f0;
 }
 
-.catalog-filter {
-  background: #f0f0f0;
-}
 
-.catalog-view {
-  background: #f0f0f0;
-}
 
-.pagination {
-  background: #f0f0f0;
-}
+
+
+
 
 .subscribe-input {
   border: none;
@@ -158,6 +164,11 @@ body {
   line-height: 50px;
 }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
 .on-order-title {
   font-size: 20px;
@@ -165,6 +176,7 @@ body {
 }
 
 .product-list-link {
+  position: relative;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   color: #000000;
@@ -203,4 +215,227 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  counter-reset: slider;
+  margin-bottom: 260px;
+}
+
+.pagination-active::before {
+  content: counter(slider, decimal-leading-zero);
+  position: absolute;
+  font-weight: 700;
+  font-size: 180px;
+  width: 250px;
+  height: 135px;
+  top: 70px;
+  right: 0;
+  color: #ffffff;
+}
+
+.slider-item {
+  display: flex;
+}
+
+.slider-no-active {
+  display: none;
+}
+
+.page-content {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider-pagination-item {
+  counter-increment: slider;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  outline: solid 2px #000000;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-catalog {
+  width: 560px;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.slider-content {
+  width: 600px;
+}
+
+
+.main-slider-characteristics {
+  display: flex;
+}
+
+.product-sections-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-list-link::before {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  content: "";
+  background-color: #ffe17f;
+  top: -200px;
+  left: 0;
+}
+
+.virtual-reality::before {
+  background-image: url(../images/virtual-reality-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.monopods::before {
+  background-image: url(../images/monopods-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.action-cameras::before {
+  background-image: url(../images/action-cameras-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fitness-bracelets::before {
+  background-image: url(../images/fitness-bracelets-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.smart-watch::before {
+  background-image: url(../images/smart-watch-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.quadrocopters::before {
+  background-image: url(../images/quadrocopters-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-list-item {
+  width: 160px;
+}
+
+.tab-non-active {
+  display: none;
+}
+
+.tab-pagination {
+  min-width: 280px;
+  margin-right: 116px;
+}
+
+.tab-title {
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+
+.tabs-vrapper {
+  display: flex;
+  align-content: flex-start;
+  padding: 64px 310px 140px 0;
+}
+
+.index-info {
+  display: flex;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subscribe-title {
+  width: 520px;
+}
+
+.subscribe-discription {
+  width: 560px;
+}
+
+.about {
+  width: 520px;
+  margin-right: 108px;
+}
+
+.contacts {
+  width: 532px;
+}
+
+.footer-social-list {
+  width: 150px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.page-footer-container {
+  display: grid;
+}
+
+
+
+
+
+
+
+.catalog-products {
+  outline: solid;
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+}
+
+.catalog-right-column {
+  width: 840px;
+  background-color: #ffffff;
+}
+
+.sorting-container {
+  background-color: #f0f0f0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.catalog-button {
+  width: 760px;
+  background-color: #ffffff;
+}
+
+.pagination {
+  background-color: #f0f0f0;
+  width: 760px;
+  display: flex;
+  justify-content: space-around;
 }
