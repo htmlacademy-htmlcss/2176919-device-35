@@ -12,7 +12,7 @@
       </a>
       <nav class="navigation">
         <ul class="navigation-list navigation-user-list list">
-          <li class="navigation-item">
+          <li class="navigation-item navigation-user-item">
             <form class="search-form subsidiary">
               <label class="main-search" for="main-search">
                 <span class="visually-hidden">Поиск по сайту.</span>
@@ -21,40 +21,40 @@
               <button class="search-submit" type="submit">Найти</button>
             </form>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Войти</a>
+          <li class="navigation-item navigation-user-item">
+            <a class="navigation-link navigation-link-user header-login" href="#">Войти</a>
           </li>
-          <li class="navigation-item">
-           <a class="navigation-link" href="#">Сравнить</a>
+          <li class="navigation-item navigation-user-item">
+           <a class="navigation-link navigation-link-user header-compare" href="#">Сравнить</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Корзина</a>
+          <li class="navigation-item navigation-user-item">
+            <a class="navigation-link navigation-link-user header-cart" href="#">Корзина</a>
           </li>
         </ul>
-        <div class="navigation-catalog">
-          <button class="button navigation-catalog-button" type="button">Каталог товаров</button>
-          <ul class="subcatalog list">
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
-            </li>
-            <li class="subcatalog-item">
-              <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="navigation-list list">
+        <ul class="navigation-list header-navigation-list list">
+          <li class="navigation-item">
+            <button class="button navigation-catalog-button" type="button">Каталог товаров</button>
+            <ul class="subcatalog list no-active">
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
           <li class="navigation-item">
            <a class="link navigation-link" href="#">Доставка</a>
           </li>
@@ -85,7 +85,7 @@
             <div class="slider-content">
               <h3 class="slider-title title">Порхает как бабочка, жалит как пчела!</h3>
               <p class="main-slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="button link main-slider-link" href="#">Подробнее</a>
+              <a class="main-slider-link button link" href="#">Подробнее</a>
               <dl class="main-slider-characteristics">
                 <div class="slider-characteristic">
                   <dt class="main-slider-characteristic">Дальность полета</dt>
@@ -98,7 +98,7 @@
               </dl>
             </div>
           </li>
-          <li class="slider-item slider-no-active">
+          <li class="slider-item no-active">
             <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет." width="560" height="560">
             <div class="slider-content">
               <h3 class="slider-title title">Худеем правильно!</h3>
@@ -106,24 +106,32 @@
 
               <a class="button link main-slider-link" href="#">Подробнее</a>
               <dl class="main-slider-characteristics">
-                <dt class="main-slider-characteristic">Без подзарядки</dt>
-                <dd class="main-slider-meaning">48 часов</dd>
+                <div class="slider-characteristic">
+                 <dt class="main-slider-characteristic">Без подзарядки</dt>
+                  <dd class="main-slider-meaning">48 часов</dd>
+                </div>
               </dl>
             </div>
           </li>
-          <li class="slider-item slider-no-active">
+          <li class="slider-item no-active">
             <img class="slider-image" src="images/slider-3.png" alt="Селфи-палка." width="560" height="560">
             <div class="slider-content">
             <h3 class="slider-title title">Делай селфи, как Бен Стиллер!</h3>
             <p class="main-slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="button link main-slider-link" href="#">Подробнее</a>
             <dl class="main-slider-characteristics">
-              <dt class="main-slider-characteristic">Длина палки</dt>
-              <dd class="main-slider-meaning">8,5 м</dd>
-              <dt class="main-slider-characteristic">Вес палки</dt>
-              <dd class="main-slider-meaning">5 кг</dd>
-              <dt class="main-slider-characteristic">Материал</dt>
-              <dd class="main-slider-meaning">Карбон</dd>
+             <div class="slider-characteristic">
+                <dt class="main-slider-characteristic">Длина палки</dt>
+                <dd class="main-slider-meaning">8,5 м</dd>
+              </div>
+              <div class="slider-characteristic">
+                <dt class="main-slider-characteristic">Вес палки</dt>
+                <dd class="main-slider-meaning">5 кг</dd>
+              </div>
+              <div class="slider-characteristic">
+                <dt class="main-slider-characteristic">Материал</dt>
+                <dd class="main-slider-meaning">Карбон</dd>
+              </div>
             </dl>
             </div>
           </li>
@@ -174,7 +182,7 @@
         <div class="tabs-vrapper page-content">
           <ul class="tab-pagination list">
             <li class="tab-pagination-item">
-              <button class="button tab-pagination-button slider-pagination-active" type="button">Доставка</button>
+              <button class="button tab-pagination-button tab-pagination-active" type="button">Доставка</button>
             </li>
             <li class="tab-pagination-item">
               <button class="button tab-pagination-button" type="button">Гарантия</button>
@@ -184,15 +192,15 @@
             </li>
           </ul>
           <ul class="tabs-content-list list">
-            <li class="tab-item tab-item-active">
+            <li class="tab-item-delivery tab-item-active">
               <h3 class="tab-title title">Доставка</h3>
               <p class="tab-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="tab-item tab-non-active">
+            <li class="tab-item no-active">
               <h3 class="tab-title title">Гарантия</h3>
               <p class="tab-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="tab-item tab-non-active">
+            <li class="tab-item no-active">
               <h3 class="tab-title title">Кредит</h3>
               <p class="tab-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </li>
@@ -237,11 +245,13 @@
           <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
           <p class="subscribe-discription">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="subscribe-email visually-hidden" for="subscribe">Подписаться.</label>
+            <label class="subscribe-email visually-hidden" for="subscribe">
+              <span class="visually-hidden">Введите ваш емэйл.</span>
+            </label>
             <input class="subscribe-input" type="email" name="subscribe-email" placeholder="Ваш e-mail" id="subscribe">
             <button class="button subscribe-button" type="button">Подписаться</button>
           </form>
-          <span class="subscribe-discription">Это бесплатно</span>
+          <span class="subscribe-comment">Это бесплатно</span>
         </div>
       </section>
     </main>
