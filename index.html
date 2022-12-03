@@ -16,8 +16,8 @@
             <form class="search-form subsidiary">
               <label class="main-search" for="main-search">
                 <span class="visually-hidden">Поиск по сайту.</span>
+                <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
               </label>
-              <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
               <button class="search-submit" type="submit">Найти</button>
             </form>
           </li>
@@ -31,37 +31,37 @@
             <a class="navigation-link navigation-link-user header-cart" href="#">Корзина</a>
           </li>
         </ul>
+        <div class="navigation-catalog">
+          <button class="button navigation-catalog-button catalog-button-plus" type="button">Каталог товаров</button>
+          <ul class="subcatalog list">
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
+            </li>
+            <li class="subcatalog-item subcatalog-quadrocopter">
+              <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-list header-navigation-list list">
-          <li class="navigation-item">
-            <button class="button navigation-catalog-button" type="button">Каталог товаров</button>
-            <ul class="subcatalog list no-active">
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
            <a class="link navigation-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
             <a class="link navigation-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
             <a class="link navigation-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -84,7 +84,7 @@
             <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер." width="560" height="560">
             <div class="slider-content">
               <h3 class="slider-title title">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="main-slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <p class="main-slider-description discription">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="main-slider-link button link" href="#">Подробнее</a>
               <dl class="main-slider-characteristics">
                 <div class="slider-characteristic">
@@ -102,8 +102,7 @@
             <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет." width="560" height="560">
             <div class="slider-content">
               <h3 class="slider-title title">Худеем правильно!</h3>
-              <p class="main-slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-
+              <p class="main-slider-description discription">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <a class="button link main-slider-link" href="#">Подробнее</a>
               <dl class="main-slider-characteristics">
                 <div class="slider-characteristic">
@@ -117,7 +116,7 @@
             <img class="slider-image" src="images/slider-3.png" alt="Селфи-палка." width="560" height="560">
             <div class="slider-content">
             <h3 class="slider-title title">Делай селфи, как Бен Стиллер!</h3>
-            <p class="main-slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <p class="main-slider-description discription">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="button link main-slider-link" href="#">Подробнее</a>
             <dl class="main-slider-characteristics">
              <div class="slider-characteristic">
@@ -181,8 +180,8 @@
         <h2 class="visually-hidden">Переключение между секциями доставка, гарантия, кредит.</h2>
         <div class="tabs-vrapper page-content">
           <ul class="tab-pagination list">
-            <li class="tab-pagination-item">
-              <button class="button tab-pagination-button tab-pagination-active" type="button">Доставка</button>
+            <li class="tab-pagination-item tab-pagination-active">
+              <button class="button tab-pagination-button" type="button">Доставка</button>
             </li>
             <li class="tab-pagination-item">
               <button class="button tab-pagination-button" type="button">Гарантия</button>
@@ -194,30 +193,30 @@
           <ul class="tabs-content-list list">
             <li class="tab-item-delivery tab-item-active">
               <h3 class="tab-title title">Доставка</h3>
-              <p class="tab-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p class="tab-description discription">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
             <li class="tab-item no-active">
               <h3 class="tab-title title">Гарантия</h3>
-              <p class="tab-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <p class="tab-description discription">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
             <li class="tab-item no-active">
               <h3 class="tab-title title">Кредит</h3>
-              <p class="tab-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              <p class="tab-description discription">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </li>
           </ul>
         </div>
       </section>
       <section class="on-order page-content">
-        <a class="on-order-link">
+        <a class="on-order-link" href="#">
         <h2 class="on-order-title button">Доставим редкий товар под заказ</h2>
         </a>
       </section>
       <div class="index-info page-content">
         <section class="about">
-          <h2 class="about-title title">О нас</h2>
-          <p class="about-discription">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p class="about-discription">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-          <ul class="about-delivery-list title-small">
+          <h2 class="about-title info-title title">О нас</h2>
+          <p class="about-discription info-description discription">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="about-discription info-description discription">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+          <ul class="about-delivery-list title-small list">
             <li class="delivery-item">Меловые линии</li>
             <li class="delivery-item">СДИК</li>
             <li class="delivery-item">ТоксБерри</li>
@@ -225,11 +224,11 @@
           <a class="button link about-link" href="#">Подробнее о нас</a>
         </section>
         <section class="contacts">
-          <h2 class="contacts-title title">Контакты</h2>
-          <p class="contacts-discription">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+          <h2 class="contacts-title info-title title">Контакты</h2>
+          <p class="contacts-discription info-description discription">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
          <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
-          <address class="contacts-address">
-            <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <address class="contacts-address info-description">
+            <p class="contacts-address-text discription">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
             <a class="contacts-phone" href="tel:+78005558628">+7 (812) 812-12-12</a>
           </address>
           <h3 class="contacts-subtitle">Время работы</h3>
@@ -243,12 +242,12 @@
       <section class="subscribe">
        <div class="subscribe-wrapper page-content">
           <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-discription">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <p class="subscribe-discription discription">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="subscribe-email visually-hidden" for="subscribe">
               <span class="visually-hidden">Введите ваш емэйл.</span>
             </label>
-            <input class="subscribe-input" type="email" name="subscribe-email" placeholder="Ваш e-mail" id="subscribe">
+            <input class="subscribe-input" type="email" name="subscribe-email" placeholder="Ваш e-mail" id="subscribe" required>
             <button class="button subscribe-button" type="button">Подписаться</button>
           </form>
           <span class="subscribe-comment">Это бесплатно</span>
@@ -260,20 +259,20 @@
         <a class="footer-contacts-logo">
           <img class="footer-logo" src="images/logo-footer.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
         </a>
-        <address class="contacts-address subsidiary">
-          <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-          <a class="contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        <address class="footer-contacts-address subsidiary">
+          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
         <nav class="footer-navigation">
           <ul class="footer-navigation-list navigation-list list">
             <li class="footer-navigation-item navigation-item">
-             <a class="link footer-navigation-link navigation-link" href="#">Доставка</a>
+             <a class="footer-navigation-link navigation-link link" href="#">Доставка</a>
             </li>
             <li class="footer-navigation-item navigation-item">
-              <a class="link footer-navigation-link navigation-link" href="#">Гарантия</a>
+              <a class="footer-navigation-link navigation-link link" href="#">Гарантия</a>
             </li>
             <li class="footer-navigation-item navigation-item">
-              <a class="link footer-navigation-link navigation-link" href="#">Контакты</a>
+              <a class="footer-navigation-link navigation-link link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -299,5 +298,27 @@
         </a>
       </div>
     </footer>
+    <script>
+      var sliders = document.querySelectorAll('.slider-item');
+      var buttons = document.querySelectorAll('.slider-pagination-button');
+
+      var changingClassInSlider = function(button, slider) {
+        button.addEventListener('click', function () {
+          if (!slider.classList.contains('slider-active')) {
+          var activeSlider = document.querySelector('.slider-active');
+          activeSlider.classList.remove('slider-active');
+          activeSlider.classList.add('no-active');
+          slider.classList.add('slider-active');
+          slider.classList.remove('no-active');
+          var activeButton = document.querySelector('.pagination-active');
+          activeButton.classList.remove('pagination-active');
+          button.classList.add('pagination-active');
+          };
+        });
+      };
+      for (var i = 0; i < buttons.length; i++) {
+      changingClassInSlider(buttons[i], sliders[i]);
+}
+    </script>
   </body>
 </html>

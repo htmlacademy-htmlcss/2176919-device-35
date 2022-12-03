@@ -8,7 +8,7 @@
   <body>
     <header class="main-header page-content">
       <a class="page-header-logo" href="index.html">
-          <img class="header-logo" src="images/logo.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
+        <img class="header-logo" src="images/logo.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
       </a>
       <nav class="navigation">
         <ul class="navigation-list navigation-user-list list">
@@ -22,49 +22,49 @@
             </form>
           </li>
           <li class="navigation-item navigation-user-item">
-            <a class="navigation-link header-login-activ" href="#">Коля Петухов</a>
+            <a class="navigation-link header-login navigation-link-user" href="#">
+            <span class="user-login">Коля Петухов</span>
+            <span class="header-login-disabled">Выйти</span>
+            </a>
           </li>
           <li class="navigation-item navigation-user-item">
-            <a class="navigation-link header-login-disabled" href="#">Выйти</a>
+           <a class="navigation-link navigation-link-user header-compare" href="#">Сравнить</a>
           </li>
           <li class="navigation-item navigation-user-item">
-           <a class="navigation-link header-compare" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item navigation-user-item">
-            <a class="navigation-link header-cart" href="#">Корзина</a>
+            <a class="navigation-link navigation-link-user header-cart" href="#">Корзина</a>
           </li>
         </ul>
+        <div class="navigation-catalog">
+          <button class="button navigation-catalog-button catalog-button-plus" type="button">Каталог товаров</button>
+          <ul class="subcatalog list">
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="subcatalog-item">
+              <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
+            </li>
+            <li class="subcatalog-item subcatalog-quadrocopter">
+              <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-list header-navigation-list list">
-          <li class="navigation-item">
-            <button class="button navigation-catalog-button" type="button">Каталог товаров</button>
-            <ul class="subcatalog list no-active">
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Умные часы</a>
-              </li>
-              <li class="subcatalog-item">
-                <a class="subcatalog-link navigation-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
            <a class="link navigation-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
             <a class="link navigation-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item header-navigation-link">
             <a class="link navigation-link" href="#">Контакты</a>
           </li>
         </ul>
@@ -89,33 +89,29 @@
         <section class="catalog-products page-content">
           <h2 class="visually-hidden">Список товаров с фильтрами</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <h3 class="catalog-title">Фильтр:</h3>
+              <h3 class="catalog-title filter-title">Фильтр:</h3>
               <fieldset class="catalog-filter-group catalog-filter-price">
                 <legend class="catalog-filter-title title-small">Стоимость</legend>
                  <div class="range">
-                  <div class="range-wrapper-inputs">
-                    <label class="cost" for="cost-from">
-                      <input class="cost-input cost-min" id="cost-from" type="number" name="cost-from" value="0">
-                      <span class="cost-label">от</span>
-                      <span class="cost-background-left"></span>
+                   <div class="range-scale">
+                     <div class="range-bar">
+                       <button class="range-toggle toggle-min" type="button">
+                         <span class="visually-hidden">Изменить минимальную цену.</span>
+                       </button>
+                       <button class="range-toggle toggle-max" type="button">
+                         <span class="visually-hidden">Изменить максимальную цену.</span>
+                       </button>
+                     </div>
+                   </div>
+                   <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label cost" for="cost-from">
+                      от<input class="cost-input cost-min" id="cost-from" type="number" name="cost-from" value="0">₽
                     </label>
-                    <label class="cost" for="cost-to">
-                      <input class="cost-input cost-max" id="cost-to" type="number" name="cost-to" value="5000">
-                      <span class="cost-label">до</span>
-                      <span class="cost-background-right"></span>
+                    <label class="catalog-filter-label cost" for="cost-to">
+                      до<input class="cost-input cost-max" id="cost-to" type="number" name="cost-to" value="5000">₽
                     </label>
-                  </div>
-                    <div class="range-scale">
-                      <div class="range-bar">
-                        <button class="range-toggle toggle-min" type="button">
-                          <span class="visually-hidden">Изменить минимальную цену.</span>
-                        </button>
-                        <button class="range-toggle toggle-max" type="button">
-                          <span class="visually-hidden">Изменить максимальную цену.</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                   </div>
+                 </div>
               </fieldset>
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title title-small">Цвет</legend>
@@ -165,12 +161,10 @@
                 <option value="cheap">Дешёвые</option>
                 <option value="expensive">Дорогие</option>
               </select>
-              <button class="max" type="button">
-                <span class="visually-hidden">Сотрировать по возрастанию.</span>
-              </button>
-              <button class="min" type="button">
-                <span class="visually-hidden">Сотрировать по убыванию.</span>
-              </button>
+              <div class="sorting-buttons">
+                <button class="sorting-button button-max" type="button">Сотрировать по возрастанию.</button>
+                <button class="sorting-button button-min" type="button">Сотрировать по убыванию.</button>
+              </div>
             </div>
             <ul class="product-list list">
               <li class="product-card">
@@ -181,7 +175,7 @@
                   <span class="product-card-price">500 ₽</span>
                 </a>
               </li>
-              <li class="product-card">
+              <li class="product-card product-new">
                 <a class="product-card-link title-small" href="#">
                 <img class="product-card-image" src="images/product-2.jpg" alt="Профессиональная селфи-палка." width="360" height="380">
                 <span class="product-card-more no-active">Подробнее</span>
@@ -233,13 +227,13 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer-container page-content">
+     <div class="page-footer-container page-content">
         <a class="footer-contacts-logo" href="index.html">
           <img class="footer-logo" src="images/logo-footer.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
         </a>
-        <address class="contacts-address subsidiary">
-          <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-          <a class="contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+        <address class="footer-contacts-address subsidiary">
+          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
         <nav class="footer-navigation">
           <ul class="footer-navigation-list navigation-list list">
