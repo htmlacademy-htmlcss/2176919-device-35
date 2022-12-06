@@ -22,7 +22,7 @@
             </form>
           </li>
           <li class="navigation-item navigation-user-item">
-            <a class="navigation-link navigation-link-user header-login" href="#">Войти</a>
+            <a class="navigation-link navigation-link-user header-login login" href="#">Войти</a>
           </li>
           <li class="navigation-item navigation-user-item">
            <a class="navigation-link navigation-link-user header-compare" href="#">Сравнить</a>
@@ -55,14 +55,14 @@
           </ul>
         </div>
         <ul class="navigation-list header-navigation-list list">
-          <li class="navigation-item header-navigation-link">
-           <a class="link navigation-link" href="#">Доставка</a>
+          <li class="navigation-item header-navigation-item">
+           <a class="link navigation-link header-navigation-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item header-navigation-link">
-            <a class="link navigation-link" href="#">Гарантия</a>
+          <li class="navigation-item header-navigation-item">
+            <a class="link navigation-link header-navigation-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item header-navigation-link">
-            <a class="link navigation-link" href="#">Контакты</a>
+          <li class="navigation-item header-navigation-item">
+            <a class="link navigation-link header-navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -136,8 +136,8 @@
           </li>
         </ul>
         <ul class="slider-pagination list">
-          <li class="slider-pagination-item pagination-active">
-            <button class="slider-pagination-button" type="button">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button pagination-active" type="button">
               <span class="visually-hidden">Первый товар из топ листа.</span>
             </button>
           </li>
@@ -180,8 +180,8 @@
         <h2 class="visually-hidden">Переключение между секциями доставка, гарантия, кредит.</h2>
         <div class="tabs-vrapper page-content">
           <ul class="tab-pagination list">
-            <li class="tab-pagination-item tab-pagination-active">
-              <button class="button tab-pagination-button" type="button">Доставка</button>
+            <li class="tab-pagination-item">
+              <button class="button tab-pagination-button button-yellow tab-pagination-active" type="button">Доставка</button>
             </li>
             <li class="tab-pagination-item">
               <button class="button tab-pagination-button button-yellow" type="button">Гарантия</button>
@@ -191,15 +191,15 @@
             </li>
           </ul>
           <ul class="tabs-content-list list">
-            <li class="tab-item-delivery tab-item-active">
+            <li class="tab-item tab-item-delivery tab-active">
               <h3 class="tab-title title">Доставка</h3>
               <p class="tab-description discription">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="tab-item no-active">
+            <li class="tab-item tab-item-guarantee no-active">
               <h3 class="tab-title title">Гарантия</h3>
               <p class="tab-description discription">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="tab-item no-active">
+            <li class="tab-item tab-item-credit no-active">
               <h3 class="tab-title title">Кредит</h3>
               <p class="tab-description discription">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </li>
@@ -259,9 +259,6 @@
         <a class="footer-contacts-logo">
           <img class="footer-logo" src="images/logo-footer.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
         </a>
-        <address class="footer-contacts-address subsidiary">
-          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        </address>
         <nav class="footer-navigation">
           <ul class="footer-navigation-list navigation-list list">
             <li class="footer-navigation-item navigation-item">
@@ -275,7 +272,10 @@
             </li>
           </ul>
         </nav>
-        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        <address class="footer-contacts-address subsidiary">
+          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        </address>
         <ul class="footer-social-list list">
           <li class="footer-social-item">
             <a class="footer-social-link footer-social-telegram" href="https://t.me/htmlacademy">
@@ -320,6 +320,27 @@
       };
       for (var i = 0; i < buttons.length; i++) {
       changingClassInSlider(buttons[i], sliders[i]);
+}
+
+      var tabs = document.querySelectorAll('.tab-item');
+      var tabButtons = document.querySelectorAll('.tab-pagination-button');
+
+      var changingTab = function(button, tab) {
+        button.addEventListener('click', function () {
+          if (!tab.classList.contains('tab-active')) {
+          var activeTab = document.querySelector('.tab-active');
+          activeTab.classList.remove('tab-active');
+          activeTab.classList.add('no-active');
+          tab.classList.add('tab-active');
+          tab.classList.remove('no-active');
+          var activeButton = document.querySelector('.tab-pagination-active');
+          activeButton.classList.remove('tab-pagination-active');
+          button.classList.add('tab-pagination-active');
+        };
+        });
+      };
+      for (var i = 0; i < tabButtons.length; i++) {
+      changingTab(tabButtons[i], tabs[i]);
 }
     </script>
   </body>
