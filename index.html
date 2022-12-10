@@ -11,26 +11,26 @@
         <img class="header-logo" src="images/logo.svg" alt="Логотип интернет-магазина «Девайс»." width="149" height="40">
       </a>
       <nav class="navigation">
-        <ul class="navigation-list navigation-user-list list">
-          <li class="navigation-item navigation-user-item">
-            <form class="search-form subsidiary">
-              <label class="main-search" for="main-search">
-                <span class="visually-hidden">Поиск по сайту.</span>
-                <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
-              </label>
-              <button class="search-submit" type="submit">Найти</button>
-            </form>
-          </li>
-          <li class="navigation-item navigation-user-item">
-            <a class="navigation-link navigation-link-user link-shape header-login login" href="#">Войти</a>
-          </li>
-          <li class="navigation-item navigation-user-item">
-           <a class="navigation-link navigation-link-user link-shape header-compare" href="#">Сравнить</a>
-          </li>
-          <li class="navigation-item navigation-user-item">
-            <a class="navigation-link navigation-link-user link-shape header-cart" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="navigation-user">
+          <form class="search-form subsidiary">
+            <label class="main-search" for="main-search">
+              <span class="visually-hidden">Поиск по сайту.</span>
+              <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
+            </label>
+            <button class="search-submit" type="submit">Найти</button>
+          </form>
+          <ul class="navigation-user-list list">
+            <li class="navigation-user-item">
+              <a class="navigation-link navigation-link-user link-shape header-login" href="#">Войти</a>
+            </li>
+            <li class="navigation-user-item">
+             <a class="navigation-link navigation-link-user link-shape header-compare" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-link navigation-link-user link-shape header-cart" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <div class="navigation-catalog">
           <button class="button navigation-catalog-button" type="button">Каталог товаров
             <span class="sub-catalog-open-icon"></span>
@@ -77,7 +77,7 @@
           <button class="slider-button slider-prev link-shape" type="button">
             <span class="visually-hidden">Предыдущий товар.</span>
           </button>
-          <button class="slider-button slider-next" type="button">
+          <button class="slider-button slider-next link-shape" type="button">
             <span class="visually-hidden">Следующий товар.</span>
           </button>
         </div>
