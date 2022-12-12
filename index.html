@@ -13,9 +13,9 @@
       <nav class="navigation">
         <div class="navigation-user">
           <form class="search-form subsidiary">
+            <span class="visually-hidden">Поиск по сайту.</span>
+            <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
             <label class="main-search" for="main-search">
-              <span class="visually-hidden">Поиск по сайту.</span>
-              <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
             </label>
             <button class="search-submit" type="submit">Найти</button>
           </form>
@@ -336,6 +336,51 @@
         </a>
       </div>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal delivery-on-order">
+        <button class="modal-close-button link-shape">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title title">Доставка под заказ</h2>
+          <form class="modal-delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group field-group-name">
+              <label class="modal-form-label modal-your-name title-small" for="customer-name">Ваше имя:</label>
+              <input class="modal-delivery-input" type="text" id="customer-name" name="customer-name" placeholder="Введите имя" minlength="4">
+            </div>
+            <div class="field-group field-group-mail">
+              <label class="modal-form-label modal-your-mail title-small" for="e-mail">Ваш e-mail:</label>
+              <input class="modal-delivery-input" type="email" id="e-mail" name="e-mail" placeholder="Введите ваш e-mail" value="почта">
+              <span class="error-message">Забавный у вас адрес</span>
+            </div>
+            <div class="field-group field-group-product">
+              <label class="modal-form-label modal-ordered-product title-small" for="ordered-product">Что нужно привезти:</label>
+              <input class="modal-delivery-input" type="text" id="ordered-product" name="ordered-product" placeholder="В свободной форме" minlength="5">
+            </div>
+            <div class="field-group field-group-amount">
+             <div class="quantity-selection">
+                <label class="modal-form-label modal-ordered-amount title-small" for="ordered-amount">Количество:</label>
+                <span class="visually-hidden">Пояснение - относительно количества заказываемых позиций.</span>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-ordered-amount"></button>
+                  <span class="tooltip-text subsidiary" role="tooltip" id="tooltip-ordered-amount">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                </span>
+              </div>
+              <div class="quantity-selection">
+                <button class="order-button order-button-min" type="button">
+                  <span class="visually-hidden">Кнопка уменьшающая количество.</span>
+                </button>
+                <input class="modal-delivery-input input-amount" type="number" id="ordered-amount" name="ordered-amount" value="1" min="1" required>
+                <button class="order-button order-button-max" type="button">
+                  <span class="visually-hidden">Кнопка увеличивающая количество.</span>
+                </button>
+              </div>
+            </div>
+            <button class="modal-delivery-button button button-yellow" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
     <script>
       var sliders = document.querySelectorAll('.slider-item');
       var buttons = document.querySelectorAll('.slider-pagination-button');

@@ -31,6 +31,40 @@
             </li>
             <li class="navigation-user-item">
               <a class="navigation-link navigation-link-user link-shape header-cart" href="#">Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="popover-title visually-hidden">Корзина.</h2>
+                  <ul class="cart-items-list list">
+                    <li class="cart-item">
+                      <a class="cart-item-link link-shape" href="#">
+                        <img class="cart-thumbnail" alt="Изображение товара." width="39" height="43" src="images/product-1.jpg">
+                         <p class="cart-item-title">Любительская<br>селфи-палка</p>
+                      </a>
+                      <button class="cart-item-button link-shape" type="button">
+                        <span class="visually-hidden">Удалить из корзины.</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="cart-item-link link-shape" href="#">
+                        <img class="cart-thumbnail" alt="Изображение товара." width="39" height="43" src="images/product-2.jpg">
+                        <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
+                      </a>
+                      <button class="cart-item-button link-shape" type="button">
+                        <span class="visually-hidden">Удалить из корзины.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="popover-cart-info">
+                    <span class="cart-total">Товаров:
+                      <span class="total-count">2</span>
+                    </span>
+                    <span class="cart-total">Сумма:
+                      <span class="total-sum">2000</span>₽
+                    </span>
+                  </div>
+                  <a class="cart-open-button link" href="#">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -303,5 +337,11 @@
         </a>
       </div>
     </footer>
+    <script>
+            let buttonOpen = document.querySelector('.header-cart');
+      buttonOpen.onclick = function() {
+  document.querySelector('.popover-cart').classList.toggle('cart-open');
+};
+    </script>
   </body>
 </html>
