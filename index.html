@@ -14,10 +14,12 @@
         <div class="navigation-user">
           <form class="search-form subsidiary">
             <span class="visually-hidden">Поиск по сайту.</span>
-            <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
-            <label class="main-search" for="main-search">
-            </label>
-            <button class="search-submit" type="submit">Найти</button>
+            <div class="search-wrapper">
+              <input class="search-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
+              <label class="main-search" for="main-search">
+              </label>
+              <button class="search-submit" type="submit">Найти</button>
+            </div>
           </form>
           <ul class="navigation-user-list list">
             <li class="navigation-user-item">
@@ -426,6 +428,14 @@
       let buttonOpen = document.querySelector('.header-cart');
       buttonOpen.onclick = function() {
   document.querySelector('.popover-cart').classList.toggle('cart-open');
+};
+      let buttonDelivery = document.querySelector('.on-order-link');
+      buttonDelivery.onclick = function() {
+  document.querySelector('.modal-container').classList.remove('modal-container-close');
+};
+let buttonClose = document.querySelector('.modal-close-button');
+      buttonClose.onclick = function() {
+  document.querySelector('.modal-container').classList.add('modal-container-close');
 };
     </script>
   </body>
