@@ -2,16 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta name="description" content="Сайт">
+    <title>Device. Интернет-магазин гаджетов.</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   </head>
   <body>
     <header class="main-header page-content">
-      <a class="page-header-logo">
+      <span class="page-header-logo">
         <img class="header-logo" src="images/logo.svg" alt="Логотип интернет-магазина «Девайс»." width="145" height="36">
-      </a>
+      </span>
       <nav class="navigation">
         <div class="navigation-user">
           <form class="search-form subsidiary" action="https://echo.htmlacademy.ru/" method="post">
@@ -67,6 +69,7 @@
                     <span class="total-sum">2000</span>₽
                   </span>
                 </div>
+<!--                Для неактивного состояния убрать href-->
                 <a class="cart-open-button link" href="#">Открыть корзину</a>
               </div>
             </div>
@@ -124,6 +127,7 @@
           </button>
         </div>
         <ul class="slider-list list">
+<!--          Для смены слайда предназначен класс slider-active-->
           <li class="slider-item slider-active">
             <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер." width="560" height="560">
             <div class="slider-content">
@@ -225,6 +229,7 @@
         <div class="tabs-wrapper page-content">
           <ul class="tab-pagination list">
             <li class="tab-pagination-item">
+<!--             Смена активной кнопки управляется классом tab-pagination-active-->
               <button class="button tab-pagination-button button-yellow tab-pagination-active" type="button">Доставка</button>
             </li>
             <li class="tab-pagination-item">
@@ -235,6 +240,7 @@
             </li>
           </ul>
           <ul class="tabs-content-list list">
+<!--           Смена информации в табе классом tab-active-->
             <li class="tab-item tab-item-delivery tab-active">
               <h3 class="tab-title title">Доставка</h3>
               <p class="tab-description description">Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.</p>
@@ -300,9 +306,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-content">
-        <a class="footer-contacts-logo link-shape">
+        <span class="footer-contacts-logo link-shape">
         <img class="footer-logo" src="images/logo-footer.svg" alt="Логотип интернет-магазина «Девайс»." width="145" height="36">
-        </a>
+        </span>
         <div class="page-footer-container">
           <div class="footer-address">
             <p class="footer-address-text subsidiary">Санкт-Петербург, набережная реки&nbsp;Карповки, 5, литера П.</p>
@@ -351,6 +357,7 @@
         </div>
       </div>
     </footer>
+<!--    Доступ к модальному окну по классу modal-container-close-->
     <div class="modal-container modal-container-close">
       <div class="modal delivery-on-order">
         <button class="modal-close-button link-shape" type="button">
@@ -370,7 +377,7 @@
             </div>
             <div class="field-group field-group-product">
               <label class="modal-form-label modal-ordered-product title-small" for="ordered-product">Что нужно привезти:</label>
-              <input class="modal-delivery-input" type="text" id="ordered-product" name="ordered-product" placeholder="В свободной форме" minlength="5" required>
+              <textarea class="modal-delivery-input modal-delivery-textarea" id="ordered-product" name="ordered-product" placeholder="В свободной форме" minlength="5" rows="1" required></textarea>
             </div>
             <div class="field-group field-group-amount">
              <div class="quantity-selection">
