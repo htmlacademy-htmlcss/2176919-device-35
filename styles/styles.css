@@ -1357,8 +1357,8 @@ body {
 }
 
 .header-login-disabled {
-  padding-left: 26px;
   opacity: 0.3;
+  padding-left: 0;
 }
 
 .product-new::before {
@@ -2926,4 +2926,16 @@ body {
 
 .header-navigation-link {
   margin-right: -5px;
+}
+
+.header-login-disabled:focus-visible {
+  outline: solid 2px #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+.header-login-disabled:focus {
+  outline: solid 2px #af4fff;
+  outline-offset: 2px;
+}
 }
