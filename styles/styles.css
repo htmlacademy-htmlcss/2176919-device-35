@@ -149,6 +149,7 @@ body {
 
 .subscribe {
   background: #f0f0f0;
+  padding-top: 65px;
 }
 
 .page-footer {
@@ -181,7 +182,7 @@ body {
 }
 
 .subscribe-input {
-  padding-left: 20px;
+  padding-left: 17px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -190,6 +191,7 @@ body {
   background-color: transparent;
   border-bottom: solid 3px #c4c4c4;
   width: 557px;
+  min-height: 57px;
 }
 
 .main-slider-meaning {
@@ -221,7 +223,7 @@ body {
   font-size: 20px;
   line-height: 23px;
   margin: 0;
-  padding: 40px 150px;
+  padding: 40px 150px 37px 150px;
 }
 
 .product-list-link {
@@ -329,9 +331,7 @@ body {
 }
 
 .slider-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -437,7 +437,6 @@ body {
 .tab-pagination {
   min-width: 280px;
   margin-right: 123px;
-  padding-left: 5px;
 }
 
 .tab-title {
@@ -452,7 +451,7 @@ body {
   display: flex;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  padding: 64px 270px 134px 0;
+  padding: 63px 270px 134px 0;
 }
 
 .index-info {
@@ -460,7 +459,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: 66px;
   padding-top: 47px;
 }
 
@@ -471,10 +470,9 @@ body {
   grid-template-columns: repeat(2, 560px);
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
-  column-gap: 40px;
-  grid-row-gap: 132px;
-  padding-top: 64px;
-  padding-bottom: 54px;
+  column-gap: 36px;
+  grid-row-gap: 133px;
+  padding-bottom: 55px;
 }
 
 .subscribe-title {
@@ -489,7 +487,7 @@ body {
 }
 
 .about {
-  margin-right: 131px;
+  margin-right: 123px;
   padding-right: 23px;
 }
 
@@ -775,7 +773,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
   grid-column: 1/-1;
+  justify-content: flex-end;
 }
 
 .breadcrumbs-list {
@@ -795,7 +795,7 @@ body {
 }
 
 .delivery-item:not(:last-child) {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .about-delivery-list {
@@ -856,6 +856,7 @@ body {
   -ms-grid-column-align: end;
   justify-self: end;
   color: #444444;
+  max-width: 150px;
 }
 
 .tab-pagination-item:not(:last-child) {
@@ -873,7 +874,7 @@ body {
   height: 164px;
   background-image: url("../images/delivery-icon.svg");
   background-repeat: no-repeat;
-  left: 115%;
+  left: 114.5%;
   top: 10px;
 }
 
@@ -914,6 +915,8 @@ body {
   align-self: center;
   position: relative;
   padding-left: 38px;
+  max-width: 190px;
+  flex-shrink: 0;
 }
 
 .info-link {
@@ -1045,7 +1048,7 @@ body {
 }
 
 .info-title {
-  margin-bottom: 46px;
+  margin-bottom: 47px;
 }
 
 .info-description {
@@ -1056,6 +1059,9 @@ body {
   position: relative;
   display: block;
   text-decoration: none;
+  background-image: url(../images/grey-ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: right 42px bottom 50%;
 }
 
 .sub-catalog-open-icon::before,
@@ -1193,7 +1199,7 @@ body {
 }
 
 .header-navigation-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 51px;
 }
 
 .button-yellow::before {
@@ -1217,7 +1223,7 @@ body {
   position: absolute;
   content: "";
   top: 0;
-  left: -5px;
+  left: 0;
   width: 280px;
   height: 100%;
   background-color: #000000;
@@ -1256,14 +1262,13 @@ body {
   content: "";
   width: 40px;
   height: 40px;
-  background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
   background-image: url("../images/information-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   top: 50%;
   transform: translateY(-50%);
-  right: 42px;
+  right: 43px;
   opacity: 0.3;
 }
 
@@ -2459,10 +2464,6 @@ body {
   height: 60px;
 }
 
-.no-active {
-  display: none;
-}
-
 .order-button::before,
 .order-button::after {
   position: absolute;
@@ -2767,6 +2768,7 @@ body {
 
 .tab-item {
   position: relative;
+  display: none;
 }
 
 .catalog-filter-label:focus-within .cost-input {
@@ -2818,7 +2820,8 @@ body {
 }
 
 .contacts-link {
-  padding: 10px 30px;
+  padding: 12px 30px;
+  margin-left: 3px;
 }
 
 .footer-navigation {
@@ -2938,4 +2941,24 @@ body {
   outline: solid 2px #af4fff;
   outline-offset: 2px;
 }
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.tab-active {
+  display: block;
+}
+
+.slider-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs-content-list {
+  padding-top: 2px;
 }
