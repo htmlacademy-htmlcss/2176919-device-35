@@ -2241,18 +2241,6 @@ body {
   outline: none;
 }
 
-.contacts-phone:focus-visible {
-  outline: solid 2px #af4fff;
-  outline-offset: 2px;
-}
-
-@supports not selector(:focus-visible) {
-.contacts-phone:focus {
-  outline: solid 2px #af4fff;
-  outline-offset: 2px;
-}
-}
-
 .navigation-user-list {
   display: -webkit-box;
   display: -ms-flexbox;
