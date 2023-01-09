@@ -1879,7 +1879,7 @@ body {
 }
 }
 
-.subscribe-input:invalid {
+.error-input {
   border-bottom-color: #ff3d3d;
 }
 
@@ -2682,28 +2682,8 @@ body {
 }
 }
 
-.modal-delivery-input:invalid:not(:-moz-placeholder-shown) {
+.modal-delivery-error {
   outline: solid 2px #ff3d3d;
-}
-
-.modal-delivery-input:invalid:not(:-ms-input-placeholder) {
-  outline: solid 2px #ff3d3d;
-}
-
-.modal-delivery-input:invalid:not(:placeholder-shown) {
-  outline: solid 2px #ff3d3d;
-}
-
-.modal-delivery-input:invalid:not(:-moz-placeholder-shown) ~ .error-message {
-  display: inline;
-}
-
-.modal-delivery-input:invalid:not(:-ms-input-placeholder) ~ .error-message {
-  display: inline;
-}
-
-.modal-delivery-input:invalid:not(:placeholder-shown) ~ .error-message {
-  display: inline;
 }
 
 .modal-delivery-input:not(:-moz-placeholder-shown) {
@@ -2949,4 +2929,8 @@ body {
 
 .tabs-content-list {
   padding-top: 2px;
+}
+
+.error-adress ~ .error-message {
+  display: inline-flex;
 }

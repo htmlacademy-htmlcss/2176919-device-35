@@ -185,6 +185,7 @@
         </ul>
         <ul class="slider-pagination list">
           <li class="slider-pagination-item">
+<!--           По классу pagination-active переключается номер слайда в слайдере-->
             <button class="slider-pagination-button pagination-active" type="button">
               <span class="visually-hidden">Первый товар из топ листа.</span>
             </button>
@@ -298,6 +299,7 @@
               <span class="visually-hidden">Введите ваш емэйл.</span>
             </label>
             <div class="input-wrapper">
+<!--             Ошибка реализована классом error-input-->
               <input class="subscribe-input" type="email" name="subscribe-email" placeholder="Ваш e-mail" id="subscribe" required>
               <button class="button subscribe-button" type="button">Подписаться</button>
             </div>
@@ -370,10 +372,12 @@
           <form class="modal-delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="field-group field-group-name">
               <label class="modal-form-label modal-your-name title-small" for="customer-name">Ваше имя:</label>
+<!--              Ошибка реализована добавлением класса modal-delivery-error-->
               <input class="modal-delivery-input" type="text" id="customer-name" name="customer-name" placeholder="Введите имя" minlength="4" required>
             </div>
             <div class="field-group field-group-mail">
               <label class="modal-form-label modal-your-mail title-small" for="e-mail">Ваш e-mail:</label>
+<!--              Ошибка реализуется добавлением класса error-adress-->
               <input class="modal-delivery-input" type="email" id="e-mail" name="e-mail" placeholder="Введите ваш e-mail" required>
               <span class="error-message">Забавный у вас адрес</span>
             </div>
